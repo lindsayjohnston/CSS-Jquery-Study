@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,400;1,800&display=swap');
 /* This makes all the padding, margins, border included in size */
 
 * {
@@ -9,7 +9,7 @@
 /* ROOT VARIABLES: */
 
 :root{
-    --primary: goldenrod;
+    --primary: rgb(241, 123, 59);
     --primary-dark: rgb(33, 32, 29);
     --primary-light: rgb(255, 250, 223);
 }
@@ -17,10 +17,14 @@
 /* MAIN DEFAULTS */
 
 body{
-    font-family: 'Tinos', serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: var(--primary);
     color: var(--primary-dark);
     margin: 0;
+}
+h1 {
+    font-weight: normal;
+    font-size: 3rem;
 }
 
 ul{
@@ -63,9 +67,20 @@ nav li{
 
 .section-heading-div{
     text-align: center;
+    background-color: var(--primary-light);
 }
 
 /* FLEXBOX */
+.container{
+    position: relative;
+}
+#click-me{
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-weight: normal;
+    margin: 0;
+}
 
 img{
     max-width: 100%;
@@ -94,13 +109,16 @@ img{
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 12.5%;
+    margin: 0px 5px 5px 5px;
 }
 
-#grid-heading{
+.grid-heading{
     grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 2;
+    display: flex;
+    justify-content: center;
 }
 
 #grid-menu{
@@ -110,6 +128,9 @@ img{
     grid-row-end: 4; 
     margin: 0 5px;
     line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 #grid-photo{
@@ -123,6 +144,9 @@ img{
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 #grid-buy-it{
     grid-column-start: 2;
@@ -145,12 +169,23 @@ img{
     grid-row-end: 5;
 }
 
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 40px;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    text-align: center;
+    padding: 20px 0px;
+}
+
 
 /* RESPONSIVE LAYOUT */
 
 @media (max-width: 800px){
     .column{
-        flex: 30%;
+        flex: 50%;
     }
 }
 
